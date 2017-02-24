@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.front {
+    margin: auto;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    background-image: url('../img/hytte.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 75vh;
+}
+
+.front h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.front p {
+    padding-top: 20px;
+}
+
+.front a {
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.front a:hover {
+    background-color: #c66154;
+    transition: all ease-in-out 0.7s;
+}
+
+.omrade {
+    height: 100vh;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+.logo {
+    max-width: 150px;
+    margin: 5px 0px 5px 15px;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+    float: right;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {
+    background-color: #c66154;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {
+    display: none;
+}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+    
+  ul.topnav li:not(:first-child) {
+      display: none;
+    }
+    
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+    
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {
+      position: relative;
+    }
+    
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+    }
+    
+  ul.topnav.responsive li {
+    display: block;
+    text-align: left;
+    }
+    
+}
