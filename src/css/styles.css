@@ -34,11 +34,13 @@ body {
 .logo {
   max-width: 70px; }
 
-col1 {
-  align: left; }
+marg {
+  margin-left: 5;
+  padding: 5; }
 
 .black {
-  background-color: pink; }
+  background-color: white;
+  margin-top: 7%; }
 
 .om-bilde {
   height: auto;
