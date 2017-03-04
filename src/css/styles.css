@@ -38,7 +38,8 @@ col1 {
   align: left; }
 
 .black {
-  background-color: white; }
+  background-color: white;
+  margin-top: 7%; }
 
 .om-bilde {
   height: auto;
