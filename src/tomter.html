@@ -49,11 +49,107 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> 
-  
-  	<i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
+ 
+ 
+  <br>
+  <div class="col-lg-offset-2">
+  		<i class="header1 glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
 		<span class="header2">Hytteområde 1</span>
-
+		<i class="header1 glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
+		<span class="col-lg-offset-7 header2 glyphicon glyphicon-print"></span>
+  </div>
   
+  <div class="container">
+       <br>
+        <div class="row">
+           
+           	<div class="col col-md-7 col-lg-7">
+                <div id="googleMap" style="width:100%;height:450px;"></div>
+       
+
+                <script>
+                    function myMap() {
+                        var mapProp = {
+                            center: new google.maps.LatLng(60.749029, 10.628599),
+                            zoom: 7,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    }
+                </script>
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbJZIzbCNYOztd53Go7IJUj_MYoW2wtLA&callback=myMap">
+					 </script>
+           		<br>
+					<b>Faseliteter:</b>
+          		<br>
+	          	<span class="header2 myglyph glyphicon glyphicon-cutlery"> </span>
+	          	
+	          	<span class="header2 myGlyph glyphicon glyphicon-tree-deciduous"> </span>
+	          	
+	          	<span class="header2 glyphicon glyphicon-flash"> </span>
+	          	<span class="header2 myGlyph2 glyphicon glyphicon-signal"> </span>
+	          	<span class="header2 myGlyph glyphicon glyphicon-tint"> </span>
+ 	          	<br>
+ 	          	
+            </div>
+            <div class="col col-md-5 col-lg-5 skrift">
+                <p width="100%">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae praesentium, amet ad nihil voluptatibus, delectus fugit quaerat voluptate, vitae architecto animi culpa ullam maxime! Maiores tempora laudantium repellendus,
+                    et! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, aliquid, fuga tenetur nesciunt distinctio magnam velit, mollitia praesentium accusamus ratione inventore eum fugiat blanditiis animi odio dicta doloremque illo. Nihil.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi inventore eius, ipsum perferendis dolorem repellat, deserunt consequuntur enim distinctio corrupti doloribus ducimus quaerat nobis tenetur. Odit a saepe velit quia. Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Optio, blanditiis maxime at, labore ipsa suscipit!
+                </p>
+                
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Navn</th>
+                            <th>Skogstad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feltnr</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Område</td>
+                            <td>Østre Telemark</td>
+                        </tr>
+                        <tr>
+                            <td>Ingress</td>
+                            <td>Skogområde</td>
+                        </tr>
+                        <tr>
+                            <td>Faseliteter</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Kontaktinformasjon</td>
+                            <td>Knut 23 45 23 94</td>
+                        </tr>
+                        <tr>
+                            <td>Reguleringsplan</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Reguleringskart</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>Prisliste</td>
+                            <td>--</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+		  
+	  </script>
   
    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
