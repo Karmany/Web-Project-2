@@ -34,6 +34,9 @@ body {
 .logo {
   max-width: 70px; }
 
+.navbar {
+  margin-bottom: 0px; }
+
 marg {
   margin-left: 5;
   padding: 5; }
