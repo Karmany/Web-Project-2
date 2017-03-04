@@ -32,7 +32,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Hjem<span class="sr-only">(current)</span></a></li>
+        <li><a href="index.html">Hjem<span class="sr-only">(current)</span></a></li>
         <li><a href="#">Områder</a></li>
         <li><a href="#">Tomter</a></li>
       </ul>
@@ -44,7 +44,7 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="omoss.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li class="active"><a href="kontakt.html">Kontakt</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -68,10 +68,8 @@
  		
  		<form action="">
 <input name="navn" placeholder="Navn"></input> <br><br>
-<input name="etternavn" placeholder="Etternavn"></input> <br><br>
 <input name="epost" placeholder="Epost"></input> <br><br>
-<input name="telefon" placeholder="Telefon"></input> <br><br>
-<input name="velgTomt" placeholder="Tomtnr"></input> <br><br>
+<input name="tomtnr" placeholder="Tomtnr" class="inputtext"></input> <br><br>
 <textarea name="HvaLurerDuPaa" placeholder="Skriv kort om hva du lurer på" cols="50" rows="5"></textarea>
 <br />
 <input type="submit" />
