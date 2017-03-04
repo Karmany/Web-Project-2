@@ -1,4 +1,5 @@
 h1 {
+<<<<<<< HEAD
   color: green; }
 
 h2 {
@@ -6,3 +7,9 @@ h2 {
 
 h3 {
   color: blue; }
+=======
+  color: #333; }
+
+h2 {
+  color: pink; }
+>>>>>>> 1836d4d2c912e4e14f09df8ac3ec595ba67e9afd
