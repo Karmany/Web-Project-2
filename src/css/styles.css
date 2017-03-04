@@ -49,3 +49,7 @@ marg {
 .tomt-head {
   text-align: center;
   margin-top: 30px; }
+
+.imgfix {
+  width: 100%;
+  margin-top: 30px; }
