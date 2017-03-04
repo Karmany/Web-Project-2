@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0; }
 
@@ -29,3 +30,11 @@ body {
 #header a:hover {
   background-color: #c66154;
   transition: all ease-in-out 0.7s; }
+=======
+.black {
+  background-color: pink; }
+
+.om-bilde {
+  height: auto;
+  width: 100%; }
+>>>>>>> 9e7cdb93fc9cc319b0d4f3d34464e61e365240c5
