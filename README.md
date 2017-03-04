@@ -6,3 +6,14 @@ Silje Lien
 Bjørn Arild Andersen
 Fredrik Paulsen
 Håkon Horvei
+
+
+
+
+### Git commands
+git status (Se status)
+git add * (Legger ALLE filer til i commiten)
+git commit (Commiter endringer)
+git pull (Henter nyeste versjon fra nett)
+git push (Pusher din versjon til nett)
+git status (Se endringer. Everything up to date? GOOD. Else if, gå tilbake.)
