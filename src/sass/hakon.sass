@@ -20,3 +20,54 @@
 
 .skrift
 	text-align: justify
+
+.bg1
+   background: url(../img/omrade1.jpg)
+
+.bg2
+   background: url(../img/omrade2.jpg)
+
+.bg3
+   background: url(../img/omrade3.jpg)
+
+.bg4
+   background: url(../img/omrade4.jpg)
+
+.bg5
+   background: url(../img/omrade5.jpg)
+
+.module
+  margin-top: 30px
+  background-size: contain
+  width: 100%
+  height: 250px
+  position: relative
+  overflow: hidden
+  background-repeat: no-repeat
+
+.module > header
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  padding: 20px 10px
+  //background: inherit
+  background-attachment: fixed
+
+.module > header::before
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-attachment: fixed
+  -webkit-filter: blur(12px)
+  filter: blur(12px)
+  transform: scale(2) translateY(20px)
+
+.module > header > h1
+  margin: 0
+  color: white
+  position: relative
+  z-index: 1
