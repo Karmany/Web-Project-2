@@ -7,9 +7,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Tomter</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="slider/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="slider/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="slider/js/ion.rangeSlider.js"></script>
@@ -17,140 +17,126 @@
   </head>
   <body>
    
-   <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!--<a class="navbar-brand" href="#"><img class="logo" src="img/tu.png"></a>-->
-      <a class="navbar-brand" href="#">
-        <img class="logo" alt="Brand" src="img/tu.png">
-      </a>
-    </div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Hjem<span class="sr-only">(current)</span></a></li>
-        <li><a href="hyttegrender.html">Områder</a></li>
-        <li class="active"><a href="tomter.html">Tomter</a></li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Søk">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="omoss.html">Om oss</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav> 
-<ol class="breadcrumb">
-  <li><a href="index.html">Hjem</a></li>
-  <li><a href="hyttegrender.html">Områder</a></li>
-  <li class="active">Tomter</li>
-</ol>
- 
- 
-  <br>
-  <div class="col-lg-offset-2">
-  		<i class="header1 glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
-		<span class="header2">Hytteområde 1</span>
-		<i class="header1 glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
-		<span class="col-lg-offset-7 header2 glyphicon glyphicon-print"></span>
-  </div>
+		 <!-- Collect the nav links, forms, and other content for toggling -->
+		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active menucolor"><a href="index.html">Hjem<span class="sr-only">(current)</span></a></li>
+			</ul>
+			<form class="navbar-form navbar-right">
+			  <div class="form-group">
+				 <input type="text" class="search form-control" placeholder="Søk...">
+			  </div>
+			  <button type="submit" class="navbutton btn btn-default">Søk</button>
+			</form>
+			
+		 </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="OmradeHeader">
+     <div class="layer">
+      	<h1>Hedmark</h1>
+      	<p>Nyt naturen i vakre Hedmark</p>
+      </div>
+   </div>
+   
+   <br><br>
   
   <div class="container line-bottom">
        <br>
         <div class="row">
            
-           	<div class="col col-md-7 col-lg-7">
-                <div id="googleMap" style="width:100%;height:450px;"></div>
-       
+           	<div class="col-md-4">
+               <div class="tomteinfo">
+               	<h2>Hytteområdet</h2>
+               	<br>
+                	<div id="googleMap" style="width:100%;height:350px;"></div>
 
-                <script>
-                    function myMap() {
+                	<script>
+                    	function myMap() {
                         var mapProp = {
                             center: new google.maps.LatLng(60.749029, 10.628599),
                             zoom: 7,
                         };
                         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                    }
-                </script>
+                    	}
+                	</script>
 
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbJZIzbCNYOztd53Go7IJUj_MYoW2wtLA&callback=myMap">
-					 </script>
-           		<br>
-					<b>Faseliteter:</b>
-          		<br>
-	          	<span class="header2 myglyph glyphicon glyphicon-cutlery"> </span>
-	          	
-	          	<span class="header2 myGlyph glyphicon glyphicon-tree-deciduous"> </span>
-	          	
-	          	<span class="header2 glyphicon glyphicon-flash"> </span>
-	          	<span class="header2 myGlyph2 glyphicon glyphicon-signal"> </span>
-	          	<span class="header2 myGlyph glyphicon glyphicon-tint"> </span>
- 	          	<br>
- 	          	
- 	          	
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbJZIzbCNYOztd53Go7IJUj_MYoW2wtLA&callback=myMap">
+						</script>
+						<br>
+						<b>Fasiliteter:</b>
+						<br>
+						<span class="header2 myglyph glyphicon glyphicon-cutlery"> </span>
+						<span class="header2 myGlyph glyphicon glyphicon-tree-deciduous"> </span>
+						<span class="header2 glyphicon glyphicon-flash"> </span>
+						<span class="header2 myGlyph2 glyphicon glyphicon-signal"> </span>
+						<span class="header2 myGlyph glyphicon glyphicon-tint"> </span>
+						<br>
+					</div>
             </div>
-            <div class="col col-md-5 col-lg-5 skrift">
-               
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Navn</th>
-                            <th>Skogstad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Feltnr</td>
-                            <td>23</td>
-                        </tr>
-                        <tr>
-                            <td>Område</td>
-                            <td>Østre Telemark</td>
-                        </tr>
-                        <tr>
-                            <td>Ingress</td>
-                            <td>Skogområde</td>
-                        </tr>
-                        <tr>
-                            <td>Fasiliteter</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Kontaktinformasjon</td>
-                            <td>Knut 23 45 23 94</td>
-                        </tr>
-                        <tr>
-                            <td>Reguleringsplan</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <td>Reguleringskart</td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <td>Prisliste</td>
-                            <td>--</td>
-                        </tr>
+            	<div class="col-md-4 skrift">
+              		<div class="tomteinfo">
+               	<h2>Informasjon</h2>
+               	<br>
+						 <table class="table table-striped">
+							  <thead>
+									<tr>
+										 <th>Navn</th>
+										 <th>Skogstad</th>
+									</tr>
+							  </thead>
+							  <tbody>
+									<tr>
+										 <td>Feltnr</td>
+										 <td>23</td>
+									</tr>
+									<tr>
+										 <td>Område</td>
+										 <td>Østre Telemark</td>
+									</tr>
+									<tr>
+										 <td>Ingress</td>
+										 <td>Skogområde</td>
+									</tr>
+									<tr>
+										 <td>Fasiliteter</td>
+										 <td></td>
+									</tr>
+									<tr>
+										 <td>Kontaktinformasjon</td>
+										 <td>Knut 23 45 23 94</td>
+									</tr>
+									<tr>
+										 <td>Reguleringsplan</td>
+										 <td>--</td>
+									</tr>
+									<tr>
+										 <td>Reguleringskart</td>
+										 <td>--</td>
+									</tr>
+									<tr>
+										 <td>Prisliste</td>
+										 <td>--</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 
-
-                    </tbody>
-                </table>
-                <p width="100%">
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae praesentium, amet ad nihil voluptatibus, delectus fugit quaerat voluptate, vitae architecto animi culpa ullam maxime! Maiores tempora laudantium repellendus, et! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
+               <div class="col-md-4">
+               	<div class="tomteinfo">
+               	<h2>Annet</h2>
+							<br>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae praesentium, amet ad nihil voluptatibus, delectus fugit quaerat voluptate, vitae architecto animi culpa ullam maxime! Maiores tempora laudantium repellendus, et! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							<br><br>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae praesentium, amet ad nihil voluptatibus, delectus fugit quaerat voluptate, vitae architecto animi culpa ullam maxime! Maiores tempora laudantium repellendus, et! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							<br>
+						</div>
+			  		</div>
                 
                
             </div>
