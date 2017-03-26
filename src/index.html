@@ -44,13 +44,19 @@
       <img src="img/TU-logo.svg" alt="logo" class="center-block">
       <h2>Velg et hytteområde:</h2>
       <div class="choose form-group">
-		  <select class="form-control" id="sel1">
-			 <option>Velg et område...</option>
+			<select class="form-control" id="sel1" onchange="location = this.value;">
+			<option>Velg et område...</option>
+			<option value="tomter.html">Hedmark</option>
+			<option value="valdres.html">Valdres</option>
+			<option value="gudbrandsdalen.html">Gudbrandsdalen</option>
+			<option value="ringsaker.html">Ringsaker</option>
+			<option value="sortrondelag.html">Sør-Trøndelag</option>
+			 <!-- <option>Velg et område...</option>
 			 <option>Hedmark</option>
 			 <option>Valdres</option>
 			 <option>Gudbrandsdalen</option>
 			 <option>Ringsaker</option>
-			 <option>Sør-Trøndelag</option>
+			 <option>Sør-Trøndelag</option> -->
 		  </select>
 		</div>
    </div>
@@ -185,6 +191,8 @@
 					<button type="button" class="socialbutton btn btn-primary btn-md">Følg oss på YouTube</button>
 					<br><br>
 					<button type="button" class="socialbutton btn btn-primary btn-md">Følg oss på Google+</button>
+					<br><br>
+					<button type="button" class="socialbutton btn btn-primary btn-md">Følg oss på Twitter</button>
 				</div>
 			</div>
 		</div>
