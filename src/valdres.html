@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Tomter</title>
+    <title>Valdres</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="slider/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="slider/css/ion.rangeSlider.skinHTML5.css">
@@ -137,7 +137,29 @@
 							<span class="header2 myGlyph2 glyphicon glyphicon-signal"> </span>
 							<span class="header2 myGlyph glyphicon glyphicon-tint"> </span>
 							<br><br>
-							<button type="button" class="socialbutton btn btn-primary btn-md">Kontakt oss om dette området</button>
+							<!--<button type="button" class="socialbutton btn btn-primary btn-md box" href="#popup1">Kontakt oss om dette området</button>-->
+							<div class="box">
+								<a class="button socialbutton btn btn-primary btn-md" href="#popup1">Kontakt oss om dette området</a>
+							</div>
+							<div id="popup1" class="overlay">
+								<div class="popup">
+									<h2>Kontakt oss</h2>
+									<a class="close" href="#">&times;</a>
+									<div class="content">
+										<form>
+											<div class="form-group">
+												<input type="email" class="kontaktskjema form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv e-postadresse her...">
+											</div>
+										  <div class="form-group">
+											 <textarea class="kontaktskjema form-control" id="exampleTextarea" placeholder="Skriv din melding her..." rows="4"></textarea>
+										  </div>
+
+										  <button type="submit" class="sendmail btn btn-primary">Send</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
 						</div>
 					</div>
             </div>
