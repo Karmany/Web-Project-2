@@ -24,7 +24,7 @@
 		 <!-- Collect the nav links, forms, and other content for toggling -->
 		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-			  <li class="active menucolor"><a href="index.html">Hjem<span class="sr-only">(current)</span></a></li>
+			  <li class="active menucolor"><a href="index.html">Tilbake til forsiden<span class="sr-only">(current)</span></a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
 			  <div class="form-group">
@@ -36,7 +36,7 @@
 		 </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-   
+   <div id="top"></div>
    <div class="container">
     <div class="row">
         <div class="col-sm-12"></div>
@@ -82,11 +82,28 @@
     </div>
 </div>
    
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-10 col-sm-2"></div>
+        <a href="#top" class="articlebutton btn btn-default" role="button">Til toppen</a>
+    </div>
+</div>
+   
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+	<script>
+		$(window).scroll(function() {
+		if ($(window).scrollTop() > 500) {
+		$('.nav').addClass('stuck');
+		} else {
+		$('.nav').removeClass('stuck');
+		}
+		});
+	</script>
+   <script src="js/smoothScroll.js"></script>
+   
 </body>
 
 </html>
