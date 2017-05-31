@@ -1,3 +1,54 @@
+<?php
+include 'php/dbh.php';
+
+if (isset($_GET['tomt'])) {
+    $getTomt = $_GET['tomt'];
+}
+
+$sql = "SELECT * FROM tomter WHERE tomtID = '$getTomt'";
+$result = mysqli_query($conn, $sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $feltID = $row['feltID'];
+        $tomtID = $row['tomtID'];
+        $gnr = $row['gnr/bnr'];
+        $areal = $row['areal'];
+        $pris = $row['pris'];
+        $status = $row['status'];
+        $merknad = $row['merknad'];
+        $img = $row['img'];
+    }
+}
+
+$sql = "SELECT omrID FROM felt WHERE feltID = '$feltID'";
+$result = mysqli_query($conn, $sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $omrID = $row['omrID'];
+    }
+}
+
+$sql = "SELECT * FROM omrader WHERE omrID = '$omrID'";
+$result = mysqli_query($conn, $sql);
+
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $lat = $row['lat'];
+        $lng = $row['lng'];
+    }
+}
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +56,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Om Oss</title>
+    <title>Tomt <?php echo $tomtID; ?></title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -27,47 +78,43 @@
         <span class="icon-bar"></span>
       </button>
                 <!--<a class="navbar-brand" href="#"><img class="logo" src="img/tu.png"></a>-->
-                <a class="navbar-brand" href="#">
+                <!--<a class="navbar-brand" href="#">
                     <img class="logo" alt="Brand" src="img/tu.png">
-                </a>
+                </a>-->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Hjem<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Områder</a></li>
-                    <li><a href="tomter.html">Tomter</a></li>
+                    <li><a href="index.php">Hjem</a></li>
+                    <li><a href="javascript:history.back()">Andre Tomter</a></li>
                 </ul>
-                <form class="navbar-form navbar-left">
+                <!--<form class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Søk">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
+                </form>-->
+                <!--<ul class="nav navbar-nav navbar-right">
                     <li><a href="omoss.html">Om oss</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
+                </ul>-->
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <ol class="breadcrumb">
+    <!--<ol class="breadcrumb">
         <li><a href="index.html">Hjem</a></li>
         <li><a href="tomter.html">Tomter</a></li>
         <li class="active">Tomt</li>
-    </ol>
-    <h1 class="tomt-head">Tomt 1</h1>
+    </ol>-->
+    <!--<h1 class="tomt-head">Tomt 1</h1>-->
     <div class="container tomrom">
         <div class="row">
             <div class="col col-md-4 skrift">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae praesentium, amet ad nihil voluptatibus, delectus fugit quaerat voluptate, vitae architecto animi culpa ullam maxime! Maiores tempora laudantium repellendus, et! Lorem ipsum
-                    dolor sit amet, consectetur adipisicing elit. Cum, aliquid, fuga tenetur nesciunt distinctio magnam velit, mollitia praesentium accusamus ratione inventore eum fugiat blanditiis animi odio dicta doloremque illo. Nihil. Lorem ipsum
-                    dolor sit amet, consectetur adipisicing elit. Sequi inventore eius, ipsum perferendis dolorem repellat, deserunt consequuntur enim distinctio corrupti doloribus ducimus quaerat nobis tenetur. Odit a saepe velit quia. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Optio, blanditiis maxime at, labore ipsa suscipit!
+                    <?php echo $merknad; ?>
                 </p>
             </div>
             <div class="col col-md-4">
@@ -81,31 +128,34 @@
                     <tbody>
                         <tr>
                             <td>Feltnr</td>
-                            <td>23</td>
+                            <td><?php echo $feltID; ?></td>
                         </tr>
                         <tr>
                             <td>Tomtenr</td>
-                            <td>1</td>
+                            <td><?php echo $tomtID; ?></td>
                         </tr>
                         <tr>
                             <td>Gnr/bnr</td>
-                            <td>2</td>
+                            <td><?php echo $gnr; ?></td>
                         </tr>
                         <tr>
                             <td>Areal</td>
-                            <td>2321 m2</td>
+                            <td><?php echo $areal; ?></td>
                         </tr>
                         <tr>
-                            <td>Pris som selveier</td>
-                            <td>2</td>
+                            <td>Pris</td>
+                            <td><?php echo $pris; ?></td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td>Ledig</td>
-                        </tr>
-                        <tr>
-                            <td>Merknad</td>
-                            <td></td>
+                            <td>
+                                <?php if ($status == 0) {
+                                echo "Ledig";
+                            } else {
+                                echo "Solgt";
+                            }
+                            ?>
+                        </td>
                         </tr>
                     </tbody>
                 </table>
@@ -116,7 +166,7 @@
                 <script>
                     function myMap() {
                         var mapProp = {
-                            center: new google.maps.LatLng(60.749029, 10.628599),
+                            center: new google.maps.LatLng(<?php echo $lat; ?>, <?php echo $lng; ?>),
                             zoom: 7,
                         };
                         var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);

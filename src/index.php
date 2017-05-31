@@ -85,45 +85,38 @@ include 'php/dbh.php';
 
     <div id="artikler"></div>
 
+
+
+
+
     <div id="artikkel">
         <div class="container">
             <div class="row row1">
-                <div class="col-md-4">
-                    <div class="artikkel">
-                        <h2>Artikkel 1</h2>
-                        <br>
-                        <p>
-                            Bacon ipsum dolor amet picanha t-bone doner shankle venison pork loin sirloin filet mignon salami leberkas chicken turducken frankfurter drumstick. Filet mignon pork chop drumstick, beef salami pork biltong capicola flank turducken pastrami doner rump
-                            hamburger.
-                        </p><br>
-                        <img class="img-responsive" src="img/omrade6.jpg" alt="artikkelbilde"><br>
-                        <a href="artikkel.html" class="articlebutton btn btn-default" role="button">Les mer</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="artikkel">
-                        <h2>Artikkel 2</h2>
-                        <br>
-                        <p>
-                            Bacon ipsum dolor amet picanha t-bone doner shankle venison pork loin sirloin filet mignon salami leberkas chicken turducken frankfurter drumstick. Filet mignon pork chop drumstick, beef salami pork biltong capicola flank turducken pastrami doner rump
-                            hamburger.
-                        </p><br>
-                        <img class="img-responsive" src="img/omrade2.jpg" alt="artikkelbilde"><br>
-                        <a href="artikkel.html" class="articlebutton btn btn-default" role="button">Les mer</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="artikkel">
-                        <h2>Artikkel 3</h2>
-                        <br>
-                        <p>
-                            Bacon ipsum dolor amet picanha t-bone doner shankle venison pork loin sirloin filet mignon salami leberkas chicken turducken frankfurter drumstick. Filet mignon pork chop drumstick, beef salami pork biltong capicola flank turducken pastrami doner rump
-                            hamburger.
-                        </p><br>
-                        <img class="img-responsive" src="img/omrade3.jpg" alt="artikkelbilde"><br>
-                        <a href="artikkel.html" class="articlebutton btn btn-default" role="button">Les mer</a>
-                    </div>
-                </div>
+                <?php
+                $sql = "SELECT * FROM artikkel";
+                $result = mysqli_query($conn, $sql);
+
+                if ($result->num_rows > 0) {
+
+                    while($row = $result->fetch_assoc()) {
+                        $artID = $row['artID'];
+                        $title = $row['title'];
+                        $intro = $row['intro'];
+                        $text = $row['text'];
+                        $artimg = $row['artimg'];
+
+
+                        echo "<div class='col-md-4'><div class='artikkel'>
+                            <h2>" . $title ."</h2>
+                            <br>
+                            <p>" . $intro ."</p><br>
+                            <img class='img-responsive' src='" . $artimg ."' alt='artikkelbilde'><br>
+                            <a href='artikkel.php?artikkel=" . $artID . "' class='articlebutton btn btn-default' role='button'>Les mer</a>
+                        </div></div>";
+
+                    }
+                }
+                 ?>
             </div>
         </div>
     </div>

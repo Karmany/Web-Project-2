@@ -289,7 +289,7 @@ if ($result->num_rows > 0) {
                         <b>Størrelse: </b>" . $areal ." kvm<br><br>
                         " . $merknad ."
                     <br><br>
-                    <button type='button' class='articlebutton btn btn-primary btn-md'>Les mer</button>
+                    <button type='button' onclick=\"location.href = '" . "tomt.php?tomt=" . $tomtID . "';\" class='articlebutton btn btn-primary btn-md'>Les mer</button>
                     <button type='button' class='articlebutton btn btn-primary btn-md'>Kontakt oss om denne tomten</button>
                     </div>
                 </div>
