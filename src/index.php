@@ -179,10 +179,10 @@ include 'php/dbh.php';
                     <b>Sosiale medier:</b>
                     <br><br>
                     <a href="https://www.facebook.com">
-                        <img src="img/1490896363_facebook_social_media_online.png" class="SosialeIconer">
+                        <img style="width:35px;" src="img/1490896363_facebook_social_media_online.png" class="SosialeIconer">
                     </a>
                     <a href="https://www.twitter.com">
-                        <img src="img/1490896354_twitter_social_media_online.png" class="SosialeIconer">
+                        <img style="width:35px;" src="img/1490896354_twitter_social_media_online.png" class="SosialeIconer">
                     </a>
                 </div>
             </div>
